@@ -67,7 +67,7 @@ Stimulus.register(
       const seconds = Math.floor(timerInSeconds);
       const formattedTimer = `${days} D : ${hours} H : ${minutes} M : ${seconds} S`;
       this.timerValue = formattedTimer;
-      if (timerInSeconds <= 0) {
+      if (timerInSeconds < 0) {
         this.element.classList.add(this.timerDoneClass);
         this.element.classList.remove(this.timerOnClass);
         this.stopRefreshing();
