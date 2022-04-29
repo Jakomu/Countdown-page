@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="controllers/countdown_controller.js"></script>
+    <title>Ultimate countdown to your destiny</title>
+  </head>
+  <body>
+    <header>
+      <h1>Countdowner!</h1>
+      <h2>Ultimate Countdown to your destiny</h2>
+    </header>
+    <div
+      data-controller="countdown"
+      data-countdown-timer-on-class="timerOn"
+      data-countdown-timer-done-class="timerDone"
+      class="timerOn"
+    >
+      <p data-countdown-target="countdownOutput" class="timer"></p>
+      <button data-action="click->countdown#pause">Pause</button>
+      <p data-countdown-target="countdownMessage" class="countdown-message">
+        Your destiny has arrived!
+      </p>
+    </div>
+  </body>
+</html>
